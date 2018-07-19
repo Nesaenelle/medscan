@@ -106,7 +106,7 @@ window.addEventListener('resize', function() {
                 url: 'send.php',
                 data: {
                     'call-name': e.target['call-name'].value,
-                    'call-phone': e.target['call-phone'].value.replace(/\s/g,'')
+                    'call-phone': e.target['call-phone'].value.replace(/\s/g, '')
                 },
                 success: function(data) {
                     closeModal();
@@ -128,6 +128,26 @@ window.addEventListener('resize', function() {
         activeModal = document.querySelector('.modal[data-modal="' + id + '"]');
         activeModal.classList.add('opened');
     }
+
+    document.querySelectorAll('.name-input').forEach(function(input) {
+        input.oninvalid = function() {
+            InvalidMsg(this);
+        };
+        input.oninput = function() {
+            InvalidMsg(this);
+        };
+
+        function InvalidMsg(textbox) {
+            if (textbox.validity.patternMismatch) {
+                textbox.setCustomValidity('Недопустимый формат');
+            } else {
+                textbox.setCustomValidity('');
+            }
+            return true;
+        }
+    });
+
+
 
     $('.phone-input').mask("+7  (  000  )  000  00  00", { placeholder: "+7  (  ___  )   ___   __   __" });
 }());

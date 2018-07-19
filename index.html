@@ -73,7 +73,7 @@
         <div class="form-block">
             <div class="container">
                 <form class="form">
-                    <input type="text" class="form__input" name="call-name" placeholder="Как вас зовут" required>
+                    <input type="text" class="form__input name-input" name="call-name" placeholder="Как вас зовут" maxlength="30" pattern="[A-Za-z0-9_]{1,30}" required>
                     <input type="text" class="form__input phone-input" name="call-phone" required>
                     <button class="btn" type="submit">записаться на прием!</button>
                     <div class="form__descr"><img src="img/icon.png" alt="">Согласен с <a href="">условиями</a> предоставления услуг и <a href="">обработки персональных данных.</a></div>
@@ -105,7 +105,7 @@
                         <div class="secondary-form__doctor">Дмитрий Горнасталев, главный врач клиники Медскан.</div>
                     </div>
                     <form class="form">
-                        <input type="text" class="form__input" name="call-name" placeholder="Как вас зовут" required>
+                        <input type="text" class="form__input name-input" name="call-name" placeholder="Как вас зовут" maxlength="30" pattern="[A-Za-z0-9_]{1,30}" required>
                         <input type="text" class="form__input phone-input" name="call-phone" required>
                         <button class="btn" type="submit">записаться на прием!</button>
                         <div class="form__descr"><img src="img/icon.png" alt="">Согласен с <a href="">условиями</a> предоставления услуг и <a href="">обработки персональных данных.</a></div>
@@ -333,7 +333,7 @@
                         <div class="secondary-form__price">Стоимость приема 2500 руб.</div>
                     </div>
                     <form class="form">
-                        <input type="text" class="form__input" name="call-name" placeholder="Как вас зовут" required>
+                        <input type="text" class="form__input name-input" name="call-name" placeholder="Как вас зовут" maxlength="30" pattern="[A-Za-z0-9_]{1,30}" required>
                         <input type="text" class="form__input phone-input" name="call-phone" required>
                         <button class="btn" type="submit">записаться на прием!</button>
                         <div class="form__descr"><img src="img/icon.png" alt="">Согласен с <a href="">условиями</a> предоставления услуг и <a href="">обработки персональных данных.</a></div>
@@ -371,7 +371,7 @@
             <form class="form">
                 <div class="modal-title">Запишитесь на прием к врачу-онкологу
                     <br>в Москве.</div>
-                <input type="text" class="form__input" name="call-name" placeholder="Как вас зовут" required>
+                <input type="text" class="form__input name-input" name="call-name" placeholder="Как вас зовут" maxlength="30" pattern="[A-Za-z0-9_]{1,30}" required>
                 <input type="text" class="form__input phone-input" name="call-phone" required>
                 <button class="btn" type="submit">записаться на прием!</button>
                 <div class="form__descr"><img src="img/icon.png" alt="">Согласен с <a href="">условиями</a> предоставления услуг и <a href="">обработки персональных данных.</a></div>
@@ -403,7 +403,7 @@
         });
     }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApbdqXqrQij4QzrvpOREkMhtl9UlxDA7c&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5gs-Kw7zqbPtePvy3DUbZcnWNCpibD0Y&callback=initMap" async defer></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/Carousel.js"></script>
     <script src="js/jquery.mask.min.js"></script>
