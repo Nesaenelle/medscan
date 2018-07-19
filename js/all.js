@@ -7,7 +7,7 @@ function desktopCarousel() {
         showTime: 5000,
         animationTime: 300,
         scale: 0.72,
-        distance: 110
+        distance: 95
     });
 }
 
