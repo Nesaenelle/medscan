@@ -101,19 +101,14 @@ window.addEventListener('resize', function() {
     document.querySelectorAll('form').forEach(function(form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            // var form = e.target;
-            // var data = {
-            //     name: e.target.name.value,
-            //     phone: e.target.phone.value
-            // };
-
-
             $.ajax({
                 method: 'post',
                 url: 'send.php',
+                data: {
+                    'call-name': e.target['call-name'].value,
+                    'call-phone': e.target['call-phone'].value.replace(/\s/g,'')
+                },
                 success: function(data) {
-                    debugger
-
                     closeModal();
                     openModal(2);
                 }

@@ -49,7 +49,7 @@ function send($to, $subject, $body, $files = array(), $type = 'html', $from = fa
     }
 
 
-    $mail = new PHPMailer(false); // the true param means it will throw exceptions on errors, which we need to catch
+    $mail = new PHPMailer(true); // the true param means it will throw exceptions on errors, which we need to catch
 
     $mail->CharSet = 'utf-8';
 
@@ -103,7 +103,7 @@ function send($to, $subject, $body, $files = array(), $type = 'html', $from = fa
             $mail->AddAttachment($path, $name);
         }
     }
-
+    
     try {
         $mail->Send();
         return true;
