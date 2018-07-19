@@ -4,10 +4,10 @@ require('./config.php');
 
 if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
 
-    if (!$_POST['captcha'] || $_POST['captcha'] != $_SESSION['code']) {
-        echo "Капча введена неверно";
-        die;
-    }
+    // if (!$_POST['captcha'] || $_POST['captcha'] != $_SESSION['code']) {
+    //     echo "Капча введена неверно";
+    //     die;
+    // }
 
     if (!$_POST['call-name'] || $_POST['call-name'] == 'Ваше имя') {
         echo "Укажите ваше имя";

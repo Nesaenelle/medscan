@@ -110,18 +110,5 @@ window.addEventListener('resize', function() {
         activeModal.classList.add('opened');
     }
 
-    // document.querySelectorAll('form').forEach(function(form) {
-    //     form.addEventListener('submit', function(e) {
-    //         e.preventDefault();
-    //         var form = e.target;
-    //         var data = {
-    //             name: e.target.name.value,
-    //             phone: e.target.phone.value
-    //         };
-    //         closeModal();
-    //         openModal(2);
-    //     }, false);
-    // });
-
     $('.phone-input').mask("+7  (  000  )  000  00  00", { placeholder: "+7  (  ___  )   ___   __   __" });
 }());

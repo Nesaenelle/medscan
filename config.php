@@ -1,7 +1,7 @@
 <?php
 
 //Кому отправляем?
-$config['mail'] = 'call@medkvadrat.ru';
+$config['mail'] = 'venomsunset@gmail.com';//'call@medkvadrat.ru';
 
 //Использовать SMTP?
 $config['use_smtp'] = false;
