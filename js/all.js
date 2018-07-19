@@ -103,7 +103,7 @@ window.addEventListener('resize', function() {
             e.preventDefault();
             $.ajax({
                 method: 'post',
-                url: '/send.php',
+                url: './send.php',
                 data: {
                     'call-name': e.target['call-name'].value,
                     'call-phone': e.target['call-phone'].value.replace(/\s/g, '')
