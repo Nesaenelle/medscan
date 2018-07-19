@@ -72,7 +72,7 @@
     <main>
         <div class="form-block">
             <div class="container">
-                <form action="mail.php" class="form">
+                <form action="send.php" method="post" class="form">
                     <input type="text" class="form__input" name="name" placeholder="Как вас зовут" required>
                     <input type="text" class="form__input phone-input" name="phone" required>
                     <button class="btn" type="submit">записаться на прием!</button>
@@ -104,7 +104,7 @@
                         <div class="secondary-form__text"> Клиника Медскан гарантирует соблюдение европейских стандартов при проведении диагностики и лечения онкологических заболеваний на деле, а не на бумаге.</div>
                         <div class="secondary-form__doctor">Дмитрий Горнасталев, главный врач клиники Медскан.</div>
                     </div>
-                    <form action="mail.php" class="form">
+                    <form action="send.php" method="post" class="form">
                         <input type="text" class="form__input" name="name" placeholder="Как вас зовут" required>
                         <input type="text" class="form__input phone-input" name="phone" required>
                         <button class="btn" type="submit">записаться на прием!</button>
@@ -332,7 +332,7 @@
                             <br>к врачу-онкологу в Москве.</div>
                         <div class="secondary-form__price">Стоимость приема 2500 руб.</div>
                     </div>
-                    <form action="mail.php" class="form">
+                    <form action="send.php" method="post" class="form">
                         <input type="text" class="form__input" name="name" placeholder="Как вас зовут" required>
                         <input type="text" class="form__input phone-input" name="phone" required>
                         <button class="btn" type="submit">записаться на прием!</button>
@@ -368,7 +368,7 @@
     <div class="modal" data-modal="1">
         <div class="js-close-modal modal__close"></div>
         <div class="secondary-form">
-            <form action="mail.php" class="form">
+            <form action="send.php" method="post" class="form">
                 <div class="modal-title">Запишитесь на прием к врачу-онкологу
                     <br>в Москве.</div>
                 <input type="text" class="form__input" name="name" placeholder="Как вас зовут" required>
@@ -403,7 +403,7 @@
         });
     }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApbdqXqrQij4QzrvpOREkMhtl9UlxDA7c&callback=initMap" async defer></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/Carousel.js"></script>
     <script src="js/jquery.mask.min.js"></script>
