@@ -294,19 +294,25 @@
                 <div class="carousel-container">
                     <ul>
                         <li>
-                            <img src="img/certificate.png" />
+                            <img src="img/licens/0b8be437fea52ba8cfa2c76a014a2b7d.jpg" />
                         </li>
                         <li>
-                            <img src="img/certificate.png" />
+                            <img src="img/licens/21705d6ec1967bbda8ea9dcb2ee1cd57.jpg" />
                         </li>
                         <li>
-                            <img src="img/certificate.png" />
+                            <img src="img/licens/3cf7ee7b51cacfd77a68382faaa32fec.jpg" />
                         </li>
                         <li>
-                            <img src="img/certificate.png" />
+                            <img src="img/licens/3e740f4bacc999e3c5603a839cd4f198.jpg" />
                         </li>
                         <li>
-                            <img src="img/certificate.png" />
+                            <img src="img/licens/92bf3e913c691486b04c71812fe9cd8a.jpg" />
+                        </li>
+                        <li>
+                            <img src="img/licens/97ba5266e77741e88f361c4cd3e8fd24.jpg" />
+                        </li>
+                        <li>
+                            <img src="img/licens/984d9891b0c5cf81d735d2157288fb34.jpg" />
                         </li>
                         <div class="left">
                             <img src="img/left.png">
@@ -381,16 +387,16 @@
     <div class="modal" data-modal="2">
         <div class="js-close-modal modal__close"></div>
         <!-- <div class="secondary-form"> -->
-            <div class="modal-subtitle">
-                Вы записались на прием.
-            </div>
-            <div class="modal-descr"> Пожалуйста, будьте на связи по указанному телефону.
-                <br>Оператор позвонит и
-                <br>согласует время и дату
-                <br>записи на прием.
-                <br> Подтверждение приема
-                <br>по телефону
-                <br>- обязательно.</div>
+        <div class="modal-subtitle">
+            Вы записались на прием.
+        </div>
+        <div class="modal-descr"> Пожалуйста, будьте на связи по указанному телефону.
+            <br>Оператор позвонит и
+            <br>согласует время и дату
+            <br>записи на прием.
+            <br> Подтверждение приема
+            <br>по телефону
+            <br>- обязательно.</div>
         <!-- </div> -->
     </div>
     <script>
@@ -398,8 +404,14 @@
 
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-            center: { lat: 55.6579539, lng: 37.5210794 },
+            center: { lat: 55.6579826, lng: 37.52337},
             zoom: 17
+        });
+        var myLatLng = { lat: 55.6579826, lng: 37.52337 };
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hello World!'
         });
     }
     </script>

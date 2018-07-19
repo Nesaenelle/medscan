@@ -1,40 +1,40 @@
 function desktopCarousel() {
     $('.carousel-container').carousel({
-        num: 5,
+        num: 7,
         maxWidth: 350,
         maxHeight: 475,
         autoPlay: false,
         showTime: 5000,
         animationTime: 300,
         scale: 0.72,
-        distance: 120
+        distance: 110
     });
 }
 
 
 function tabletCarousel() {
     $('.carousel-container').carousel({
-        num: 3,
-        maxWidth: 250,
+        num: 7,
+        maxWidth: 240,
         maxHeight: 375,
         autoPlay: false,
         showTime: 5000,
         animationTime: 300,
         scale: 0.72,
-        distance: 120
+        distance: 50
     });
 }
 
 function mobileCarousel() {
     $('.carousel-container').carousel({
-        num: 3,
+        num: 7,
         maxWidth: 160,
         maxHeight: 250,
         autoPlay: false,
         showTime: 5000,
         animationTime: 300,
         scale: 0.72,
-        distance: 80
+        distance: 40
     });
 }
 
@@ -48,14 +48,14 @@ function onResize() {
         mobileCarousel();
     } else {
         $('.carousel-container').carousel({
-            num: 3,
-            maxWidth: 130,
-            maxHeight: 200,
+            num: 7,
+            maxWidth: 120,
+            maxHeight: 180,
             autoPlay: false,
             showTime: 5000,
             animationTime: 300,
             scale: 0.72,
-            distance: 70
+            distance: 30
         });
     }
 }
