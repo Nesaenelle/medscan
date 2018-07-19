@@ -15,7 +15,7 @@ function desktopCarousel() {
 function tabletCarousel() {
     $('.carousel-container').carousel({
         num: 7,
-        maxWidth: 240,
+        maxWidth: 250,
         maxHeight: 375,
         autoPlay: false,
         showTime: 5000,
