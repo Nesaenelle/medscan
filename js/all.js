@@ -97,6 +97,30 @@ window.addEventListener('resize', function() {
         }
     }, false);
 
+
+    document.querySelectorAll('form').forEach(function(form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // var form = e.target;
+            // var data = {
+            //     name: e.target.name.value,
+            //     phone: e.target.phone.value
+            // };
+
+
+            $.ajax({
+                method: 'post',
+                url: 'send.php',
+                success: function(data) {
+                    debugger
+
+                    closeModal();
+                    openModal(2);
+                }
+            })
+        }, false);
+    });
+
     function closeModal(e) {
         if (activeModal) {
             activeModal.classList.remove('opened');
