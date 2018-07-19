@@ -1,0 +1,38 @@
+footer {
+    padding: 19px 0 25px 0px;
+    position: relative;
+    .container {
+        height: 100%;
+    }
+    .footer-top {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .logo {}
+    .footer-list {
+        display: flex;
+        width: 100%;
+        padding: 8px 0 0 81px;
+        &__item {
+            font-weight: 300;
+            margin-right: 24px;
+            letter-spacing: 0.1px;
+            font-size: 14px;
+            color: #5c707c;
+            &_group {
+                display: flex;
+                .footer-list__item {
+                   &:first-child {
+                     text-align: left;
+                   }
+                   &:last-child {
+                     text-align: right;
+                   }
+
+                }
+            }
+        }
+    }
+}

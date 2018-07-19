@@ -1,0 +1,250 @@
+.slider {
+    margin-top: 169px;
+    position: relative;
+    height: 427px;
+    &__wrapper {
+        position: relative; // overflow: hidden;
+        // padding-top: 50px;
+        // padding-bottom: 50px;
+        // height: 427px;
+    }
+    &__scroller {
+        display: flex;
+        justify-content: space-between; // transition: 0.2s; // height: 427px;
+    }
+    &__arrows {
+        &_left,
+        &_right {
+            position: absolute;
+            top: -120px;
+            bottom: 0;
+            margin: auto;
+            width: 30px;
+            height: 30px;
+            background-size: cover!important;
+            cursor: pointer;
+        
+            .icon {
+                transition: 0.3s;
+            }
+            &:hover {
+               .icon {
+                    fill: $c-pink;
+               }
+            }
+            .mdi {
+                font-size: 28px;
+            }
+        }
+        &_left {
+            left: -45px;
+            transform: rotate(-180deg); // background: url(img/long-arrow-pointing-black.svg);
+        }
+        &_right {
+            right: -45px;
+            transform: rotate(0deg); // background: url(img/long-arrow-pointing-black.svg);
+        }
+    }
+    &__controls {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 22px;
+        width: 200px;
+        margin: auto;
+        left: 0;
+        right: 0;
+        align-items: center;
+        &_item {
+            width: 6px;
+            min-width: 6px;
+            height: 6px;
+            min-height: 6px;
+            background: #fe90b0;
+            border-radius: 100%;
+            margin: 0 10px;
+            transition: 0.2s;
+            cursor: pointer;
+            position: relative;
+            &.active {
+                transform: scale(1.7);
+                background: #ed2984;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                width: calc(100% + 14px);
+                height: calc(100% + 14px);
+                margin-left: -7px;
+                margin-top: -7px;
+                pointer-events: auto;
+            }
+        }
+    }
+
+    &__item {
+
+        position: relative;
+        width: calc(100%/3 - 20px);
+        height: 285px;
+        display: none;
+        >div {
+            position: absolute;
+            z-index: 0;
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 100%;
+            padding: 0 33px;
+            background: #fe90b0;
+        }
+        &.slideOutUpLeft,
+        &.slideOutUpRight {
+            z-index: 1000;
+            position: absolute;
+
+
+            &:after,
+            &:before {
+                content: none;
+            }
+            &:nth-child(3n + 1) {
+                margin-left: 0;
+                animation-delay: 0s;
+            }
+            &:nth-child(3n + 2) {
+                margin-left: calc(100%/3 + 10px);
+                animation-delay: 0.2s;
+            }
+            &:nth-child(3n + 3) {
+                margin-left: calc((100%/3)*2 + 20px);
+                animation-delay: 0.4s;
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 96%;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom: -6px;
+            background: #dc7d99;
+            height: 96%;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: -2;
+            width: 93%;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom: -12px;
+            background: #c26e87;
+            height: 93%;
+        }
+        &.active {
+            display: block;
+
+            &:not(.slideOutUpLeft)>div,
+            &:not(.slideOutUpRight)>div {
+                animation-duration: 1s;
+                animation-fill-mode: both;
+                animation-name: scaleIn;
+                transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+            }
+        }
+        &_avatar {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: -56px;
+            border-radius: 100%;
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+            box-shadow: 0 6px 30px -17px #000;
+            img {
+                width: 100%;
+            }
+        }
+        &_descr {
+            font-size: 16px;
+            color: #fff;
+            margin-top: 74px;
+            text-align: center;
+            line-height: 1.5em;
+        }
+        &_name {
+            margin-top: 22px;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+@keyframes slideOutUpLeft {
+    from {
+        transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+
+    to {
+        visibility: hidden;
+        transform: translate3d(-50%, -100%, 0) rotate(-45deg) scale(0.7);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutUpRight {
+    from {
+        transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+
+    to {
+        visibility: hidden;
+        transform: translate3d(50%, -100%, 0) rotate(45deg) scale(0.7);
+        opacity: 0;
+    }
+}
+
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.98) translateY(8px);
+    }
+
+    to {
+        transform: scale(1) translateY(0px);
+    }
+}
+
+.scaleIn {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: scaleIn;
+    transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+.slideOutUpLeft {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: slideOutUpLeft;
+    transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+.slideOutUpRight {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: slideOutUpRight;
+    transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}

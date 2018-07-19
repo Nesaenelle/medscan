@@ -1,0 +1,281 @@
+/* MOBILES */
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 980px) {
+    .desktop {
+        display: none!important;
+    }
+
+    .mobile {
+        display: block!important;
+    }
+
+
+    .phone__number,
+    .phone__text {
+        text-align: center;
+    }
+    .top-block {
+        .container {
+            padding-top: 25px;
+            flex-wrap: wrap;
+            &:after {
+                display: none;
+            }
+        }
+        &__doctor,
+        &__time,
+        &__position {
+            display: none;
+        }
+        &__left {
+            width: 100%;
+            text-align: center;
+        }
+        &__title {
+            margin-top: 13px;
+        }
+        &__reception {
+            margin-top: 8px;
+        }
+        &__address {
+            width: 280px;
+            margin: auto;
+            text-align: center;
+        }
+        .btn {
+            margin-top: 18px;
+        }
+        .icon-marker {
+            left: 22px;
+        }
+        &__img {
+            margin: 17px auto 0px;
+            display: block;
+        }
+        &__right {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    .form__input , .secondary-form .form__input{
+        width: 48%;
+        margin: 0 auto 20px;
+        &.phone-input {
+            width: 48%;
+             margin: 0 auto 20px;
+        }
+    }
+
+
+    .form .btn, .secondary-form .form .btn{
+        width: 60%;
+        margin: 0px auto;
+    }
+
+    .form__descr {
+        text-align: center;
+        padding: 0;
+    }
+
+    .title h1 {
+        font-size: 26px;
+    }
+
+    .secondary-form {
+        flex-wrap: wrap;
+        margin-top: 25px;
+        &__title {
+            br{
+                display: none;
+            }
+        }
+        &__text {
+            br {
+                display: none;
+            }
+        }
+        &__img {
+            display: none;
+        }
+        &__left {
+            padding: 14px 20px 16px 18px;
+            width: 100%;
+        }
+        .form {
+            width: 100%;
+        }
+    }
+    .secondary-form.last .secondary-form__left {
+        width: 100%;
+        padding: 14px 20px 16px 18px;
+    }
+
+    footer .footer-list {
+        display: block;
+        padding: 0;
+        &__item {
+            text-align: center;
+            width: 100%;
+            margin: 0;
+            &_group {
+                width: 320px;
+                margin: auto;
+                justify-content: center;
+            }
+        }
+    }
+
+    .protocols .carousel-container {
+        height: 350px;
+    }
+}
+
+
+//MOBILE
+@media screen and (max-width: 860px) {
+    .info-block__facts-list {
+        display: block;
+        &_item {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+
+
+    .info-block__descr {
+        margin-top: 15px;
+        padding: 0px 0 0px 22px;
+    }
+
+    .secondary-form__text,
+    .secondary-form__doctor {
+        display: none;
+    }
+
+    .secondary-form.last {
+
+        .secondary-form__text,
+        .secondary-form__doctor {
+            display: block;
+        }
+    }
+
+    .form .btn {
+        margin: auto;
+    }
+
+    .info-block .advantages__item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .info-block .advantages__item_img {
+        margin: 25px auto auto;
+    }
+    .doctors {
+        margin-top: 10px;
+    }
+
+    .doctors__list_item {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 720px) {}
+
+@media screen and (max-width: 600px) {
+    .title h1 {
+        line-height: 28px;
+    }
+    .form-block {
+        .container {
+            padding: 0;
+        }
+    }
+    .info-block__facts-title {
+        font-size: 22px;
+    }
+    .info-block .title.first {
+        margin: 24px 0 15px;
+    }
+    .info-block .title.third {
+        margin: 20px 0 0px;
+    }
+    .info-block__facts-list {
+        margin-top: 24px;
+    }
+    .info-block .advantages {
+        margin-top: 20px;
+    }
+    .doctors .container {
+        padding-top: 25px;
+        .title {
+            padding: 0 20px;
+        }
+    }
+    .protocols .container {
+        padding-top: 25px;
+    }
+    footer .footer-top {
+        flex-direction: column-reverse;
+    }
+
+    footer .logo {
+        margin-top: 20px;
+    }
+
+    .footer-list {
+        margin-top: 20px;
+    }
+    .protocols .carousel-container {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form__input, .secondary-form .form__input{
+        width: 100%;
+        margin: 0 auto 14px;
+        &.phone-input {
+            width: 100%;
+             margin: 0 auto 14px;
+        }
+    }
+    .info-block__facts-list_item {
+        padding: 12px 68px 18px 24px;
+        font-size: 18px;
+    }
+
+    .form .btn, .secondary-form .form .btn{
+        width: 100%;
+    }
+
+    .secondary-form__doctor {
+        margin-bottom: 20px;
+    }
+    .secondary-form__bottom>div {
+        align-items: flex-end;
+    }
+    .protocols .carousel-container {
+        height: 220px;
+    }
+    footer .footer-list__item_group {
+        width: 303px;
+    }
+}
+
+@media screen and (max-width: 420px) { 
+    .secondary-form__img {
+        width: 100px;
+    }
+}
